@@ -77,7 +77,14 @@ class stub(object):
         self.__dict__.update(kwargs)
 
     def __repr__(self):
+<<<<<<< HEAD
         return '<stub %r>' % self.__dict__
+=======
+        return '<stub(%s)>' % ', '.join([
+            '%s=%r' % (key, val)
+            for key, val in self.__dict__.items()
+        ])
+>>>>>>> repr
 
 
 def raiser(exc):

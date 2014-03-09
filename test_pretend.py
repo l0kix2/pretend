@@ -126,7 +126,11 @@ class TestStub(object):
     def test_default_repr(self):
         x = stub(a=10)
 
+<<<<<<< HEAD
         assert repr(x) == "<stub {'a': 10}>"
+=======
+        assert repr(x) == "<stub(a=10)>"
+>>>>>>> repr
 
     def test_custom_repr(self):
         x = stub(id=300, __repr__=lambda: '<Something>')
